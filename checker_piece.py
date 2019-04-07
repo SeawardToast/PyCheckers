@@ -14,15 +14,14 @@ class Checker_Piece:
 
     def move(self, destx, desty, board):
         print("selfx: ", self.x, "selfy: ", self.y)
-        temp = board[self.x][self.y]
+        temp = board.board_arr[self.x][self.y]
         remx = destx%2
         remy = desty%2
         print("destx: ", destx, "desty: ", desty)
         if(destx-self.x==1 or self.x-destx==1):
             print("You can not move there")
             return
-        board[self.x][self.y] = 5
-        board[destx][desty] = temp
+        board.board_arr[destx][desty] = temp
 
         
 
